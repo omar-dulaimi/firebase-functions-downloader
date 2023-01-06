@@ -25,7 +25,7 @@ Automatically download your Firebase/Google Cloud Functions.
 ## With npx
 
 ```shell
-npx firebase-fd --project dev --region us-central
+npx firebase-functions-downloader --project dev --region us-central
 ```
 
 ## With npm
@@ -49,7 +49,7 @@ or
 2- Execute command
 
 ```shell
-npx firebase-fd --project dev --region us-central
+firebase-fd --project dev --region us-central
 ```
 
 # Available Options
