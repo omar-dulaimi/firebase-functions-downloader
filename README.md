@@ -15,8 +15,17 @@ Automatically download your Firebase/Google Cloud Functions.
 
 ## Table of Contents
 
+- [Prerequisites](#prerequisites)
 - [Usage](#usage)
+  - [With npx](#with-npx)
+  - [With npm](#with-npm)
 - [Available Options](#available-options)
+
+# Prerequisites
+
+1- Make sure to have the [gCloud CLI](https://cloud.google.com/sdk/docs/install) installed
+
+2- Provide credentials as described [here](https://cloud.google.com/docs/authentication/provide-credentials-adc)
 
 # Usage
 
@@ -68,3 +77,4 @@ firebase-fd --project dev --region us-central
 
   - alias: `o`
   - optional
+
