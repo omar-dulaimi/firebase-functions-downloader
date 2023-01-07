@@ -42,7 +42,7 @@ body:
   - type: textarea
     attributes:
       label: Firebase Functions Downloader Version
-      description: Run `firebase -v` and paste it between the ´´´
+      description: Run `firebase-fd -v` and paste it between the ´´´
       value: |
         ```
 
