@@ -1,10 +1,10 @@
 import {
-    download,
-    getDownloadUrls,
-    getFunctionsList,
-    setAuth
-} from './helpers';
-import { DownloaderArgs } from './types';
+  download,
+  getDownloadUrls,
+  getFunctionsList,
+  setAuth
+} from './helpers.js';
+import { DownloaderArgs } from './types.js';
 
 export default async function downloader(options: DownloaderArgs) {
   await setAuth();
