@@ -21,7 +21,7 @@ console.log(
 const program = new Command();
 
 program
-  .version('0.0.3', '-v, --version')
+  .version('0.0.4', '-v, --version')
   .description('Automatically download Firebase/Google Cloud Functions code')
   .option(
     '-o, --output <value>',

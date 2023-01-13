@@ -1,6 +1,6 @@
 {
   "name": "firebase-functions-downloader",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "description": "Downloads firebase/google cloud functions code",
   "repository": "https://github.com/omar-dulaimi/firebase-functions-downloader",
