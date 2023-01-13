@@ -1,6 +1,7 @@
 {
   "name": "firebase-functions-downloader",
   "version": "0.0.3",
+  "type": "module",
   "description": "Downloads firebase/google cloud functions code",
   "repository": "https://github.com/omar-dulaimi/firebase-functions-downloader",
   "bin": {
@@ -29,6 +30,7 @@
     "commander": "^9.4.1",
     "figlet": "^1.5.2",
     "googleapis": "^110.0.0",
+    "ora": "^6.1.2",
     "p-map": "^4.0.0"
   },
   "devDependencies": {
