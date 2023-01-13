@@ -1,0 +1,15 @@
+{
+    "name": "Firebase Functions Downloader",
+    "platforms": [
+        "Admin",
+        "Node"
+    ],
+    "content": "README.md",
+    "related": [],
+    "tabs": [
+        {
+            "title": "NPM",
+            "href": "https://www.npmjs.com/package/firebase-functions-downloader"
+        }
+    ]
+}
