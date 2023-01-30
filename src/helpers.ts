@@ -1,6 +1,5 @@
 import axios from 'axios';
 import chalk from 'chalk';
-import fs from 'fs/promises';
 import { google } from 'googleapis';
 import ora from 'ora';
 import pMap from 'p-map';
@@ -11,6 +10,7 @@ import {
   MinimalDownloadUrlType,
   MinimalFunctionType
 } from './types.js';
+import { writeFileSafely } from './utils.js';
 
 export async function setAuth() {
   const auth = new google.auth.GoogleAuth({
@@ -71,7 +71,7 @@ export const download = async (
       spinner.spinner = 'dots';
       spinner.start();
       const res = await axios.get(url, { responseType: 'arraybuffer' });
-      await fs.writeFile(path.join(options.output, `${name}.zip`), res.data);
+      await writeFileSafely(path.join(options.output, `${name}.zip`), res.data);
       spinner.stopAndPersist();
     } catch (error) {
       spinner.stopAndPersist({
