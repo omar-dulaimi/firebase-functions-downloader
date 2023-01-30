@@ -38,10 +38,10 @@ program
 const options: DownloaderArgs = program.opts();
 console.log(options);
 
-downloader(options)
+downloader({ ...options, output: `${options.output}-${Date.now()}` })
   .then(() => {
-    console.log('Success');
+    console.log('\n\n\r', chalk.green('Success') + '\n\n');
   })
   .catch((error) => {
-    console.log('Failed: ', error);
+    console.log('\n\n\r', chalk.red('Failed') + error + '\n\n');
   });
