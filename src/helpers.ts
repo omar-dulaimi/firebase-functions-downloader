@@ -50,6 +50,7 @@ export const getDownloadUrls = async (
         `projects/${options.project}/locations/${options.region}/functions/`,
         '',
       ),
+      JSON.stringify(cFunction, null, 2),
     ]);
   });
   spinner.stopAndPersist();
@@ -62,7 +63,7 @@ export const download = async (
 ) => {
   const spinner = ora();
   for (const [, value] of downloadUrls.entries()) {
-    const [functionResult, name] = value;
+    const [functionResult, name, settings] = value;
     const url = functionResult.data.downloadUrl;
     try {
       spinner.color = 'yellow';
@@ -71,7 +72,12 @@ export const download = async (
       spinner.spinner = 'dots';
       spinner.start();
       const res = await axios.get(url, { responseType: 'arraybuffer' });
-      await writeFileSafely(path.join(options.output, `${name}.zip`), res.data);
+      writeFileSafely(path.join(options.output, `${name}.zip`), res.data);
+      writeFileSafely(
+        path.join(options.output, `${name}-settings.json`),
+        settings,
+        { encoding: 'utf-8' },
+      );
       spinner.stopAndPersist();
     } catch (error) {
       spinner.stopAndPersist({

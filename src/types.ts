@@ -17,4 +17,5 @@ export declare interface MinimalDownloadUrlDataType {
 export declare type MinimalDownloadUrlType = [
   MinimalDownloadUrlDataType,
   string,
+  any
 ][];
